@@ -1,0 +1,123 @@
+/* Estilos gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s, opacity 0.3s ease;
+}
+
+/* Tema claro */
+:root {
+    --bg-color: #fcaeae;
+    --text-color: #353535;
+    --card-bg: rgba(255, 255, 255, 0.7);
+}
+
+/* Tema escuro */
+body.dark {
+    --bg-color: #1e1e1e;
+    --text-color: #f0e7db;
+    --card-bg: #000000;
+}
+
+/* Animações */
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Títulos */
+h1, h2 {
+    text-align: center;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 2.0rem;
+    margin-bottom: 30px;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    margin: 20px 0;
+}
+
+/* Links */
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff6666;
+}
+
+/* Área de conteúdo */
+#conteudo-dinamico {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Botão de tema claro/escuro */
+#toggleTheme {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* Estilo único para as imagens com circulo */
+.foto-sobre,
+.foto-inicial,
+.imagem-3,
+.imagem-4,
+.imagem-5 {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--text-color);
+}
+
+/* Ajuste de tamanho da foto-sobre */
+.foto-sobre {
+    width: 160px;
+    height: 160px;
+    border: 3px solid var(--text-color);
+}
+
+/* Tamanho padrão das outras imagens */
+.foto-inicial,
+.imagem-3,
+.imagem-4,
+.imagem-5 {
+    width: 140px;
+    height: 140px;
+}
